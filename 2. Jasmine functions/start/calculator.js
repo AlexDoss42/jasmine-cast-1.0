@@ -15,5 +15,8 @@ Calculator.prototype.multiply = function(number) {
 };
 
 Calculator.prototype.divide = function(number) {
+  if (number === 0) {
+    throw new Error('Cannot divide by 0');
+  }
   return this.total /= number;
 };
