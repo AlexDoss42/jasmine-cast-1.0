@@ -3,24 +3,24 @@ function calculate(inputValue) {
   const numbers = inputValue.split(expression);
   const numA = parseInt(numbers[0]);
   const numB = parseInt(numbers[1]);
-  const operations = inputValue.match(expression);
+  const operation = inputValue.match(expression);
 
   const calculator = new Calculator();
-  calculator.add(numberA);
+  calculator.add(numA);
 
   let result;
   switch(operation[0]) {
     case '+':
-      result = calculator.add(numberB);
+      result = calculator.add(numB);
       break;
     case '-':
-      result = calculator.subtract(numberB);
+      result = calculator.subtract(numB);
       break;
     case '*':
-      result = calculator.multiply(numberB);
+      result = calculator.multiply(numB);
       break;
     case '/':
-      result = calculator.divide(numberB);
+      result = calculator.divide(numB);
       break;
   }
 
