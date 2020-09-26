@@ -28,5 +28,11 @@ describe('calculator.js', function() {
 
     expect(calculator.total).toBe(25);
   });
+
+  it('should initialize the total', function () {
+    const calculator = new Calculator();
+
+    expect(calculator.total).toBe(0);
+  });
 });
 
