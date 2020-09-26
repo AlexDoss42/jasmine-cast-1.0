@@ -10,22 +10,21 @@ describe('main.js', function() {
   });
 
   descibe('updateResult()', function() {
-    let element;
     beforeAll(function() {
-      element = document.getElementById("div");
+      const element = document.getElementById("div");
       element.getAttribute("id", "result");
 
       document.body.appendChild(element);
+      this.element = element;
     });
 
     afterAll(function() {
-      const element = document.getElementById('result');
       document.body.removeChild(element);
     });
 
     it('adds result to DOM element', function() {
       updateResult('5');
-      expect(element.innerText).toBe('5');
+      expect(this.element.innerText).toBe('5');
     });
   });
 });
