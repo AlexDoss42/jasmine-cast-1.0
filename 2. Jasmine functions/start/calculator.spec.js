@@ -14,11 +14,19 @@ describe('calculator.js', function() {
   });
 
   it('should multiply total by number', function() {
+    const calculator = new Calculator();
+    calculator.total = 100;
+    calculator.multiply(2);
 
+    expect(calculator.total).toBe(200);
   });
 
   it('should divide total by number', function() {
+    const calculator = new Calculator();
+    calculator.total = 100;
+    calculator.divide(4);
 
+    expect(calculator.total).toBe(25);
   });
 });
 
