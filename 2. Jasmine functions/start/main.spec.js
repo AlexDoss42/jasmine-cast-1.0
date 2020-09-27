@@ -40,11 +40,40 @@ describe('main.js', function() {
       expect(spy).toHaveBeenCalledWith(4);
     });
 
-    it('calls subtract');
-    it('calls multiply');
-    it('calls divide');
-    it('calls validates operation');
-    it('calls updateResult');
+    it('calls subtract', function() {
+      const spy = spyOn(Calculator.prototype, 'subtract');
+
+      calculate('3-7');
+
+      expect(spy).toHaveBeenCalled();
+      expect(spy).toHaveBeenCalledWith(7);
+    });
+
+    it('calls multiply', function() {
+      const spy = spyOn(Calculator.prototype, 'multiply');
+
+      calculate('3*7');
+
+      expect(spy).toHaveBeenCalled();
+      expect(spy).toHaveBeenCalledWith(7);
+    });
+
+    it('calls divide', function() {
+      const spy = spyOn(Calculator.prototype, 'divide');
+
+      calculate('3/7');
+      
+      expect(spy).toHaveBeenCalled();
+      expect(spy).toHaveBeenCalledWith(7);
+    });
+
+    it('calls validates operation', function() {
+
+    });
+
+    it('calls updateResult', function() {
+
+    });
   });
 
   descibe('updateResult()', function() {
