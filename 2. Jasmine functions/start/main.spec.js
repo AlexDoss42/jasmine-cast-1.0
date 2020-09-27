@@ -1,6 +1,29 @@
 describe('main.js', function() {
   descibe('calculate()', function() {
-    it('validates expression');
+    it('validates expression when the first number is invalid', function() {
+      spyOn(window, 'updateResult').and.stub();
+
+      calculate('a+3');
+
+      expect(window.updateResult).toHaveBeenCalled();
+    });
+
+    it('validates expression when the second number is invalid', function() {
+      spyOn(window, 'updateResult').and.stub();
+
+      calculate('3+a');
+
+      expect(window.updateResult).toHaveBeenCalled();
+    });
+
+    it('validates expression when operation is invalid', function() {
+      spyOn(window, 'updateResult').and.stub();
+
+      calculate('3_4');
+
+      expect(window.updateResult).toHaveBeenCalled();
+    });
+
     it('calls add');
     it('calls subtract');
     it('calls multiply');
