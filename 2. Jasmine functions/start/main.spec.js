@@ -9,19 +9,21 @@ describe('main.js', function() {
     });
 
     it('validates expression when the second number is invalid', function() {
-      spyOn(window, 'updateResult').and.stub();
+      spyOn(window, 'updateResult');
 
       calculate('3+a');
 
       expect(window.updateResult).toHaveBeenCalled();
+      expect(window.updateResult).toHaveBeenCalledWith('Expression not recognized');
     });
 
     it('validates expression when operation is invalid', function() {
-      spyOn(window, 'updateResult').and.stub();
+      spyOn(window, 'updateResult');
 
       calculate('3_4');
 
       expect(window.updateResult).toHaveBeenCalled();
+      expect(window.updateResult).toHaveBeenCalledWith('Expression not recognized');
     });
 
     it('calls add');
