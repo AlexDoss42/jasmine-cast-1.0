@@ -62,17 +62,19 @@ describe('main.js', function() {
       const spy = spyOn(Calculator.prototype, 'divide');
 
       calculate('3/7');
-      
+
       expect(spy).toHaveBeenCalled();
       expect(spy).toHaveBeenCalledWith(7);
     });
 
-    it('calls validates operation', function() {
-
-    });
-
     it('calls updateResult', function() {
+      spyOn(window, 'updateResult');
+      spyOn(Calculator.prototype, 'multiply').and.callThrough();
 
+      calculate('5*5');
+
+      expect(window.updateResult).toHaveBeenCalled();
+      expect(window.updateResult).toHaveBeenCalledWith(25);
     });
   });
 
