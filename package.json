@@ -1,0 +1,19 @@
+{
+  "name": "jasmine-casts-1.0",
+  "version": "1.0.0",
+  "description": "Udemy course project",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexDoss42/jasmine-cast-1.0.git"
+  },
+  "author": "Alex Doss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexDoss42/jasmine-cast-1.0/issues"
+  },
+  "homepage": "https://github.com/AlexDoss42/jasmine-cast-1.0#readme"
+}
